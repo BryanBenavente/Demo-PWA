@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            PWA APP
+        </title>
+        <link rel="manifest" href="/manifest.json">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <script src="script/main.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+        </script>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>        
+    </head>
+    <body>        
+        <center>
+            <h1 styles="font-weight: bold;">PWA y la web que se puede instalar</h1>
+            <br>
+            <hr>
+
+            <button id="btn1" class="boton_personalizado" value="black"> Naranja </button>
+
+            <button id="btn2" class="boton_personalizado" value="blue"> Azul </button>
+    
+            <button id="btn3" class="boton_personalizado" value="coral"> Coral </button>
+
+            <br>
+            <hr>
+            <script>
+                // Evento click del boton
+                $("#btn1").click(function(){
+                $("body").toggleClass("black"); // Llamar a la clase black
+                });
+            </script>
+
+            <script>
+                $("#btn2").click(function(){
+                $("body").toggleClass("blue");
+                });
+            </script>
+
+            <script>
+                $("#btn3").click(function(){
+                $("body").toggleClass("coral");
+                });
+            </script>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+/* Color que tendra por default */
+body {
+    background-color: cyan;
+    color: black;
+}
+
+/* Clase con los colores a cambiar */
+.black {
+    background-color: rgb(250, 184, 42);
+    color: white;
+}
+
+.blue {
+    background-color: rgb(10, 122, 250);
+    color: white;
+}
+
+.coral {
+    background-color: coral;
+    color: white;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #20201c;
+    border-radius: 6px;
+    border: 2px solid black;
+  }
+  .boton_personalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
